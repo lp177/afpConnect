@@ -28,12 +28,14 @@ Switch your mac home directory with a distant mounted partition on a dedicate se
     For example i can tipe in shell export HOME=/Volumes/lp177
 
 Or alias a switch in your mac zshrc:
+```shell
 
 MOUNT="/Volumes/`whoami`"
-HOLD_HOME="/nfs/zfs-student-2/users/2014/luperez"
+HOLD_HOME="`pwd`"
 
 alias pk="pkill -u `whoami`"
 alias sz="source ~/.zshrc"
 alias vz="vim ~/.zshrc"
 alias goserv="export HOME=$MOUNT;cd;sz"
 alias gomac="export HOME=$HOLD_HOME;cd;sz"
+```
