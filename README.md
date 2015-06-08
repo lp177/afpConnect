@@ -9,7 +9,7 @@ Switch your mac home directory with a distant mounted partition on a dedicate se
   You need to configure various files, most tutorial and documentations exist on it, good read.
   
 [Tuto on kremalicious.com for exemple](https://kremalicious.com/ubuntu-as-mac-file-server-and-time-machine-volume/)
-
+[Doc](http://netatalk.sourceforge.net/2.0/htmldocs/)
 (Give me better than it for add that here if you found)
 
 
