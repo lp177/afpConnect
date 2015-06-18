@@ -3,7 +3,7 @@ MOUNT="/Volumes/`whoami`"
 HOLD_HOME="/nfs/zfs-student-3/users/2014/luperez"
 
 alias la="ls -lah"
-alias pk="pkill -u `whoami`"
+alias pk="pkill -u `whoami`" #kill the helper and others dutys after startup
 alias sz="source ~/.zshrc"
 alias vz="vim ~/.zshrc"
 
