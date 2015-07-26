@@ -83,6 +83,7 @@ alias e42="gomac;rm -rf .Trash .duty .ssh Library/Keychains Library/Caches;rm -r
 ```
 
 
+
 Now the procedure to launch that is just to connect in afp at your server at start-up manually or automaticely and open a shell.
 
 Have a nice day.
