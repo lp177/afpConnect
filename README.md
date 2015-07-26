@@ -30,21 +30,13 @@ Switch your mac home directory with a distant mounted partition on a dedicate se
     With set the env variable HOME at the new path home.
     For example i can tipe in shell export HOME=/Volumes/lp177
 
-On mac ~ zshrc:
+On mac zshrc:
 ```shell
-
-MOUNT="/Volumes/myMountName"
-HOLD_HOME="`pwd`"
-
-alias pk="pkill -u `whoami`"
-alias sz="source ~/.zshrc"
-alias vz="vim ~/.zshrc"
-alias goserv="export HOME=$MOUNT;cd;sz"
-alias gomac="export HOME=$HOLD_HOME;cd;sz"
+source /Volumes/myMountName/.start.sh"
 ```
 
 
-### On server ~ .start.sh is call just one time for import various conf/files in local storage.
+### On server home .start.sh is call just one time for import various conf/files in local storage and auto erase her call.
 It's really important to deporte this amorce, because if you do a fatal mistake and have previous automatise this call at startup, you can always edit him from other device with no automation.
 
 ```shell
