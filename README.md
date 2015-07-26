@@ -48,7 +48,7 @@ It's really important to deporte this amorce, because if you do a fatal mistake 
 ```shell
 MOUNT="/Volumes/myMountName"
 
-HOLD_HOME="/nfs/zfs-student-*/users/201*/`whoami`"
+HOLD_HOME="/nfs/zfs-student-*/users/20[0-9][0-9]/`whoami`"
 HOLD_HOME=`eval echo ${HOLD_HOME}`
 
 pkill -u `whoami`
@@ -62,7 +62,7 @@ cp -R $MOUNT/.brew $HOLD_HOME/.brew
 ```shell
 MOUNT="/Volumes/myMountName"
 
-HOLD_HOME="/nfs/zfs-student-*/users/201*/`whoami`"
+HOLD_HOME="/nfs/zfs-student-*/users/20[0-9][0-9]/`whoami`"
 HOLD_HOME=`eval echo ${HOLD_HOME}`
 
 export HOME=$MOUNT
