@@ -43,6 +43,7 @@ It's really important to deporte this amorce, because if you do a fatal mistake 
 
 ```shell
 MOUNT="/Volumes/myMountName"
+
 HOLD_HOME="/nfs/zfs-student-*/users/201*/`whoami`"
 HOLD_HOME=`eval echo ${TRY_PATH}`
 
@@ -56,6 +57,7 @@ cp -R $MOUNT/.brew $HOLD_HOME/.brew
 
 ```shell
 MOUNT="/Volumes/myMountName"
+
 HOLD_HOME="/nfs/zfs-student-*/users/201*/`whoami`"
 HOLD_HOME=`eval echo ${TRY_PATH}`
 
