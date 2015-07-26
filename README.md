@@ -10,7 +10,7 @@ Switch your mac home directory with a distant mounted partition on a dedicate se
   
 [Tuto on kremalicious.com for exemple](https://kremalicious.com/ubuntu-as-mac-file-server-and-time-machine-volume/)
 
-[Doc](http://netatalk.sourceforge.net/3.1/htmldocs/)
+[Official documentation of netatalk](http://netatalk.sourceforge.net/3.1/htmldocs/)
 
 (Give me better than it for add that here if you found)
 
