@@ -37,6 +37,10 @@ On mac zshrc:
 source /Volumes/myMountName/.start.sh
 ```
 
+In following examples i use the eval shell commande for resolve HOLD_HOME path because it can change in my case frequently, but if you have a fixe path, please delete him.
+
+Dont forget to edit MOUNT variable with your proper path
+
 
 ### On server home .start.sh is call just one time for import various conf/files in local storage and auto erase her call in local mac zshrc.
 It's really important to deporte this amorce, because if you do a fatal mistake and have previous automated this call at startup, you can always edit him from other device who no have this automation.
