@@ -81,3 +81,8 @@ alias showMeTruth="defaults write com.apple.finder AppleShowAllFiles -boolean tr
 alias e42="gomac;rm -rf .Trash .duty .ssh Library/Keychains Library/Caches;rm -rf /tmp/*/*;rm -rf /tmp/*;rm -rf Downloads/*;exit"
 
 ```
+
+
+Now the procedure to launch that is just to connect in afp at your server at start-up manually or automaticely and open a shell.
+
+Have a nice day.
