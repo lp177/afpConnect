@@ -34,7 +34,7 @@ Switch your mac home directory with a distant mounted partition on a dedicate se
 
 On mac zshrc:
 ```shell
-source /Volumes/myMountName/.start.sh"
+source /Volumes/myMountName/.start.sh
 ```
 
 
