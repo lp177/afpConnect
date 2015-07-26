@@ -15,31 +15,35 @@ Switch your mac home directory with a distant mounted partition on a dedicate se
 (Give me better than it for add that here if you found)
 
 
-## Client configuration
+## Finder configuration
 
   Connect a first time your server via finder:
     Go > Connect to server, give afp://(my user)@(my server ip or my ddn)
 
   For conveniance you can save your password in keychain for do a automount at start.
 
-  Now if you have effectively acces to your home server we can configure confortables presets.
-  
-## Confortables presets
-
   You can set your home server at default page in finder:
     Finder > Finder Preferences > New Finder windows show
+  
+  You can customize toolbar with right click on him and drag a button connect to server. 
+  
   And finnaly linck yours shells settings (zshrc, vimrc, homyzsh ...)
     With set the env variable HOME at the new path home.
     For example i can tipe in shell export HOME=/Volumes/myMountName
+
+  Now if you have effectively acces to your home server we can configure automated start-up.
+  
+## Automated start-up
+
 
 On mac zshrc:
 ```shell
 source /Volumes/myMountName/.start.sh
 ```
 
-In following examples i use the eval shell commande for resolve HOLD_HOME path because it can change in my case frequently, but if you have a fixe path, please delete him.
+In following examples i use the eval shell commande for resolve dynamically HOLD_HOME path because it can change in my case frequently, but if you have a fixe path, please delete him, is not realy a good practice in all cases.
 
-Dont forget to edit MOUNT variable with your proper path
+Dont forget to edit MOUNT variable with your proper mount path
 
 
 ### On server home .start.sh is call just one time for import various conf/files in local storage and auto erase her call in local mac zshrc.
