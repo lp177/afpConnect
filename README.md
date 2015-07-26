@@ -38,8 +38,8 @@ source /Volumes/myMountName/.start.sh"
 ```
 
 
-### On server home .start.sh is call just one time for import various conf/files in local storage and auto erase her call.
-It's really important to deporte this amorce, because if you do a fatal mistake and have previous automated this call at startup, you can always edit him from other device with no automation.
+### On server home .start.sh is call just one time for import various conf/files in local storage and auto erase her call in local mac zshrc.
+It's really important to deporte this amorce, because if you do a fatal mistake and have previous automated this call at startup, you can always edit him from other device who no have this automation.
 
 ```shell
 MOUNT="/Volumes/myMountName"
