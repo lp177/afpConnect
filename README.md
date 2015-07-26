@@ -45,7 +45,7 @@ It's really important to deporte this amorce, because if you do a fatal mistake 
 MOUNT="/Volumes/myMountName"
 
 HOLD_HOME="/nfs/zfs-student-*/users/201*/`whoami`"
-HOLD_HOME=`eval echo ${TRY_PATH}`
+HOLD_HOME=`eval echo ${HOLD_HOME}`
 
 pkill -u `whoami`
 echo -n "source $MOUNT/.z42.sh" > $HOLD_HOME/.zshrc
@@ -59,7 +59,7 @@ cp -R $MOUNT/.brew $HOLD_HOME/.brew
 MOUNT="/Volumes/myMountName"
 
 HOLD_HOME="/nfs/zfs-student-*/users/201*/`whoami`"
-HOLD_HOME=`eval echo ${TRY_PATH}`
+HOLD_HOME=`eval echo ${HOLD_HOME}`
 
 export HOME=$MOUNT
 alias goserv="export HOME=$MOUNT;cd"
