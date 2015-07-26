@@ -1,5 +1,5 @@
 MOUNT="/Volumes/myMountName"
-HOLD_HOME="/nfs/zfs-student-*/users/201*/`whoami`"
+HOLD_HOME="/nfs/zfs-student-*/users/20[0-9][0-9]/`whoami`"
 HOLD_HOME=`eval echo ${TRY_PATH}`
 
 pkill -u `whoami`
