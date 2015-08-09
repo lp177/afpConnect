@@ -11,3 +11,4 @@ source $MOUNT/.z42.sh
 #get .brew
 rm -rf $HOLD_HOME/.brew
 cp -pXRf $MOUNT/.brew $HOLD_HOME/.brew
+mkdir -p $HOLD_HOME/Library/Caches/Homebrew
