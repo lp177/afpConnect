@@ -4,22 +4,22 @@ HOLD_HOME=`eval echo ${HOLD_HOME}`
 ZSHRC="(.z42.sh|.zshrc)"
 
 export HOME=$MOUNT
-export PATH="$MOUNT/.brew/bin:$PATH_BASE"
-export HOMEBREW_TEMP="/tmp"
+
+export PATH=$HOLD_HOME/.brew/bin:$PATH_BASE
+export HOMEBREW_TEMP=/tmp
+export HOMEBREW_PREFIX=$HOLD_HOME/.brew;
+export HOMEBREW_CELLAR=$HOLD_HOME/.brew/Cellar;
+
+alias sysinfo="system_profiler SPSoftwareDataType"
 
 alias goserv="
-    export HOMEBREW_PREFIX=$MOUNT/.brew;
-    export HOMEBREW_CELLAR=$MOUNT/.brew/Cellar;
-    export PATH=$MOUNT/.brew/bin:$PATH_BASE;
-    export HOME=$MOUNT;
-    cd
+	export HOME=$MOUNT;
+	cd
 "
+
 alias gomac="
-    export HOMEBREW_PREFIX=$HOLD_HOME/.brew;
-    export HOMEBREW_CELLAR=$HOLD_HOME/.brew/Cellar;
-    export PATH=$HOLD_HOME/.brew/bin:$PATH_BASE;
-    export HOME=$HOLD_HOME;
-    cd
+	export HOME=$HOLD_HOME;
+	cd
 "
 
 alias vz="vim ~/$ZSHRC"
