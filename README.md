@@ -34,12 +34,12 @@ Switch your mac home directory with a distant mounted partition on a dedicate se
   Now if you have effectively acces to your home server we can configure automated start-up.
 
 
-# Automated start-up
+# Automated start-up & deport all your fat stuff
 
 
 ## Configure
 
-Replace path l2 of .zshrc and .start.sh l1 by your mount path afp on mac
+Replace path line 2 of .zshrc and line 1 of .start.sh by your mount path afp on mac
 
 On mac zshrc:
 ```shell
