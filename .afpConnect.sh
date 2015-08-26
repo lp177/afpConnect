@@ -6,7 +6,7 @@ MAC_HOME=`eval echo ${MAC_HOME}`
 export MAC_HOME
 export AFP_HOME
 
-PATH_BASE="/Volumes/afp177/app:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
+PATH_BASE="$AFP_HOME/app:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
 
 ZSHRC="(.z42.sh|.zshrc)"
 
