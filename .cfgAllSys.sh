@@ -25,7 +25,7 @@ alias showRealyBig="du -ch | grep 'G	'"
 alias vz="vim ~/.zshrc"
 alias sz="source ~/.zshrc"
 alias cz="cat ~/.zshrc"
-alias va="vim ~/.zshrc-core.sh"
+alias va="vim ~/.cfgAllSys.sh"
 
 # View
 alias tree="tree -Cah"
