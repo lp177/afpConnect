@@ -8,8 +8,6 @@ export AFP_HOME
 
 PATH_BASE="$AFP_HOME/app:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
 
-ZSHRC="(.z42.sh|.zshrc)"
-
 alias goserv="
 	export HOME=$AFP_HOME;
 	cd
