@@ -78,7 +78,7 @@ mkdir -p $MAC_HOME/Library/Caches/Homebrew
 
 ```
 
-# For preserve one config for server one for mac and don't duplicate basic conf we have:
+### For preserve one config for server one for mac and don't duplicate basic conf we have:
 	
 	.cfgMac.sh  -- Load once on mac
 	.cfgServer.sh -- Load once where i ssh
