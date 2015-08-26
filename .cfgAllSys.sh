@@ -1,3 +1,13 @@
+if [ -d $HOME/.oh-my-zsh ]; then
+	export ZSH=$HOME/.oh-my-zsh
+	export UPDATE_ZSH_DAYS=1
+	source $ZSH/oh-my-zsh.sh
+fi
+
+if [ -f $HOME/.gitSync/gitSync.sh ]; then
+	source $HOME/.gitSync/gitSync.sh
+fi
+
 # Colors man
 export LESS_TERMCAP_mb=$'\E[01;31m'    # début de blink
 export LESS_TERMCAP_md=$'\E[01;31m'    # début de gras
@@ -79,13 +89,3 @@ alias autoInstall="
 	cd ~/.vim/bundle
 	git clone https://github.com/scrooloose/nerdtree.git
 "
-
-if [ -f $HOME/.gitSync/gitSync.sh ]; then
-	source $HOME/.gitSync/gitSync.sh
-fi
-
-if [ -d $HOME/.oh-my-zsh ]; then
-	export ZSH=~/.oh-my-zsh
-	export UPDATE_ZSH_DAYS=1
-	source $ZSH/oh-my-zsh.sh
-fi
