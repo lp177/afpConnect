@@ -79,12 +79,12 @@ mkdir -p $MAC_HOME/Library/Caches/Homebrew
 
 ```
 
-### For preserve one config for server one for mac and don't duplicate basic conf we have:
-	
+### For preserve one config for server one for mac and don't duplicate basic conf we have :
+
 	.cfgMac.sh  -- Load once on mac
 	.cfgServer.sh -- Load once where i ssh
 	.cfgAllSys.sh -- Load all time
-	
+
 	.zshrc -- Load the good cfg server/mac and load cfgAllSys 
 
 .zshrc (in server home):
