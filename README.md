@@ -43,7 +43,7 @@ Replace path line 2 of .zshrc and line 1 of .start.sh by your mount path afp on 
 
 On mac zshrc:
 ```shell
-source /Volumes/myMountName/.start.sh
+source /Volumes/[myMountName]/.start.sh
 ```
 
 In following examples i use the eval shell commande for resolve dynamically HOLD_HOME path because it can change in my case frequently (for 42 student), but if you have a fixe path, please delete him, is not realy a good practice in all cases.
