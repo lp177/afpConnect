@@ -7,4 +7,3 @@ elif [[ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]]; then
 fi
 
 source $HOME/.cfgAllSys.sh
-source $HOME/.identity.sh
