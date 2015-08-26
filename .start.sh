@@ -1,14 +1,20 @@
-MOUNT="/Volumes/myMountName"
+AFP_HOME="/Volumes/afp177"
 
-HOLD_HOME="/nfs/zfs-student-*/users/20[0-9][0-9]/`whoami`"
-HOLD_HOME=`eval echo ${HOLD_HOME}`
+MAC_HOME="/nfs/zfs-student-*/users/201[0-9]/`whoami`"
+MAC_HOME=`eval echo ${MAC_HOME}`
 
 #import and execute distant zshrc
 pkill -u `whoami`
-echo -n "source $MOUNT/.z42.sh" > $HOLD_HOME/.zshrc
-source $MOUNT/.z42.sh
+echo -n "source $AFP_HOME/.zshrc" > $MAC_HOME/.zshrc
+source $AFP_HOME/.zshrc
 
 #get .brew
-rm -rf $HOLD_HOME/.brew
-cp -pXRf $MOUNT/.brew $HOLD_HOME/.brew
-mkdir -p $HOLD_HOME/Library/Caches/Homebrew
+rm -rf $MAC_HOME/.brew
+cp -pXRf $AFP_HOME/.brew $MAC_HOME/.brew
+
+#get atom
+rm -rf $MAC_HOME/.atom
+cp -pXRf $AFP_HOME/.atom $MAC_HOME/.atom
+
+#fix brew
+mkdir -p $MAC_HOME/Library/Caches/Homebrew
