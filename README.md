@@ -32,11 +32,12 @@ Switch your mac home directory with a distant mounted partition on a dedicate se
     For example i can tipe in shell export HOME=/Volumes/myMountName
 
   Now if you have effectively acces to your home server we can configure automated start-up.
-  
-## Automated start-up
 
 
-# Configure
+# Automated start-up
+
+
+## Configure
 
 Replace path l2 of .zshrc and .start.sh l1 by your mount path afp on mac
 
