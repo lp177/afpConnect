@@ -37,6 +37,13 @@ alias c+="clang++ *cpp"
 alias CC="/usr/bin/gcc"
 
 # Git
+	# extension homyzsh
+plugins=(git)
+	# Fount master by default
+git config --global push.default matching
+	# Set vim viewer for merge
+git config --global merge.tool vimdiff
+
 alias gs="git status"
 alias gp="git push origin master"
 alias gc="git commit -am"
@@ -73,9 +80,12 @@ alias autoInstall="
 	git clone https://github.com/scrooloose/nerdtree.git
 "
 
-source $HOME/.gitSync/gitSync.sh
+if [ -f $HOME/.gitSync/gitSync.sh ]; then
+	source $HOME/.gitSync/gitSync.sh
+fi
 
-export ZSH=~/.oh-my-zsh
-export UPDATE_ZSH_DAYS=1
-plugins=(git)
-source $ZSH/oh-my-zsh.sh
+if [ -d $HOME/.oh-my-zsh ]; then
+	export ZSH=~/.oh-my-zsh
+	export UPDATE_ZSH_DAYS=1
+	source $ZSH/oh-my-zsh.sh
+fi
