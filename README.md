@@ -36,55 +36,67 @@ Switch your mac home directory with a distant mounted partition on a dedicate se
 ## Automated start-up
 
 
+# Configure
+
+Replace path l2 of .zshrc and .start.sh l1 by your mount path afp on mac
+
 On mac zshrc:
 ```shell
 source /Volumes/myMountName/.start.sh
 ```
 
-In following examples i use the eval shell commande for resolve dynamically HOLD_HOME path because it can change in my case frequently, but if you have a fixe path, please delete him, is not realy a good practice in all cases.
+In following examples i use the eval shell commande for resolve dynamically HOLD_HOME path because it can change in my case frequently (for 42 student), but if you have a fixe path, please delete him, is not realy a good practice in all cases.
 
-Dont forget to edit MOUNT variable with your proper mount path
+Dont forget to edit AFP_HOME variable with your proper mount path
 
 
 ### On server home .start.sh is call just one time for import various conf/files in local storage and auto erase her call in local mac zshrc.
 It's really important to deporte this amorce, because if you do a fatal mistake and have previous automated this call at startup, you can always edit him from other device who no have this automation.
 
 ```shell
-MOUNT="/Volumes/myMountName"
+AFP_HOME="/Volumes/[My AFP Mount]"
 
-HOLD_HOME="/nfs/zfs-student-*/users/20[0-9][0-9]/`whoami`"
-HOLD_HOME=`eval echo ${HOLD_HOME}`
+MAC_HOME="/nfs/zfs-student-*/users/201[0-9]/`whoami`"
+MAC_HOME=`eval echo ${MAC_HOME}`
 
 #import and execute distant zshrc
 pkill -u `whoami`
-echo -n "source $MOUNT/.z42.sh" > $HOLD_HOME/.zshrc
-source $MOUNT/.z42.sh
+echo -n "source $AFP_HOME/.zshrc" > $MAC_HOME/.zshrc
+source $AFP_HOME/.zshrc
 
 #get .brew
-rm -rf $HOLD_HOME/.brew
-cp -pXRf $MOUNT/.brew $HOLD_HOME/.brew
+rm -rf $MAC_HOME/.brew
+cp -pXRf $AFP_HOME/.brew $MAC_HOME/.brew
+
+#get atom
+rm -rf $MAC_HOME/.atom
+cp -pXRf $AFP_HOME/.atom $MAC_HOME/.atom
+
+#fix brew
+mkdir -p $MAC_HOME/Library/Caches/Homebrew
+
 ```
 
-## On server home .z42.sh is my definitive zshrc (I dont put that on my .zshrc server for preserve one to linux server and one to mac desktop):
+## For preserve one config for server one for mac and don't duplicate basic conf we have:
+	
+	.cfgMac.sh  -- Load once on mac
+	.cfgServer.sh -- Load once where i ssh
+	.cfgAllSys.sh -- Load all time
+	
+	.zshrc -- Load the good cfg server/mac and load cfgAllSys 
 
+.zshrc (in server home):
 ```shell
-MOUNT="/Volumes/myMountName"
+if [[ "$(uname)" == "Darwin" ]]; then
+  source /Volumes/afp177/.cfgMac.sh
+elif [[ "$(expr substr $(uname -s) 1 5)" == "Linux" ]]; then
+  source /home/luperez/.cfgServer.sh
+elif [[ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]]; then
+  echo "What do you fuck dude ?"
+fi
 
-HOLD_HOME="/nfs/zfs-student-*/users/20[0-9][0-9]/`whoami`"
-HOLD_HOME=`eval echo ${HOLD_HOME}`
-
-export HOME=$MOUNT
-
-export PATH=$HOLD_HOME/.brew/bin:$PATH_BASE
-export HOMEBREW_TEMP=/tmp
-export HOMEBREW_PREFIX=$HOLD_HOME/.brew;
-export HOMEBREW_CELLAR=$HOLD_HOME/.brew/Cellar;
-
-alias sysinfo="system_profiler SPSoftwareDataType"
-
-alias goserv="
-	export HOME=$MOUNT;
-	cd
+source $HOME/.cfgAllSys.sh
+source $HOME/.identity.sh
 "
 
 alias gomac="
